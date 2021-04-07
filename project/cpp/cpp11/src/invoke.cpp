@@ -27,14 +27,14 @@ template<typename func,typename... _Args>
 void ttttprint(func f,_Args&&... __args){
     (f)(std::forward<_Args>(__args)...);
 }
-int main(){
-    std::invoke(print,10,'8',10.0f);
-    tprint(10,'8',10.0f);
+// int main(){
+//     std::invoke(print,10,'8',10.0f);
+//     tprint(10,'8',10.0f);
 
-    funcprint *fp = print;
-    (fp)(10,'8',10.0f);
+//     funcprint *fp = print;
+//     (fp)(10,'8',10.0f);
 
-    tttprint(print,10,'8',10.0f);
-    ttttprint(print,10,'8',10.0f);
-    return 0;
-}
+//     tttprint(print,10,'8',10.0f);
+//     ttttprint(print,10,'8',10.0f);
+//     return 0;
+// }

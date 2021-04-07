@@ -4,7 +4,7 @@ using namespace std;
 template<unsigned long N>
 struct binary
 {
-    static unsigned const value=((binary<N/10>::value * 2) + N%10);
+    static unsigned const value=((binary<N/10>::value<<1) + (N&0x1));
 };
 template <>
 struct  binary<0>
