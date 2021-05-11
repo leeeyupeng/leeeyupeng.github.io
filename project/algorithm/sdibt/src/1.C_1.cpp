@@ -73,16 +73,16 @@ public:
     }
 };
 
-int main(){
-    int n = 0;  
-    pair<int,int> vec[MAXN];
-    Solution solution;
-    while(cin>>n && n > 0){
-        for(int i = 0; i < n; i ++){
-            cin>>vec[i].first>>vec[i].second;
-        }
+// int main(){
+//     int n = 0;  
+//     pair<int,int> vec[MAXN];
+//     Solution solution;
+//     while(cin>>n && n > 0){
+//         for(int i = 0; i < n; i ++){
+//             cin>>vec[i].first>>vec[i].second;
+//         }
 
-        solution.Solve(n,vec);
-    } 
-    return 0;
-}
+//         solution.Solve(n,vec);
+//     } 
+//     return 0;
+// }
