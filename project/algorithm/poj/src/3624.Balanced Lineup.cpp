@@ -69,32 +69,32 @@ public:
     }
 };
 
-int main(){
-    int n,q;
-#ifndef ONLINE_JUDGE
-	freopen("in.txt", "r", stdin);
-	freopen("out.txt", "w", stdout);
-#endif
-    n = read();
-    q = read();
-    {
-        for(int i = 0; i < n; i ++){
-            nums[i] = read();
-        }
-        Solution solution;
-        solution.Solve(n);
-        int l,r;
-        for(int i = 0; i < q; i ++){
-            l = read();r = read();
-            write(solution.getminmax(l-1,r-1));
-            putchar('\n');
-        }
+// int main(){
+//     int n,q;
+// #ifndef ONLINE_JUDGE
+// 	freopen("in.txt", "r", stdin);
+// 	freopen("out.txt", "w", stdout);
+// #endif
+//     n = read();
+//     q = read();
+//     {
+//         for(int i = 0; i < n; i ++){
+//             nums[i] = read();
+//         }
+//         Solution solution;
+//         solution.Solve(n);
+//         int l,r;
+//         for(int i = 0; i < q; i ++){
+//             l = read();r = read();
+//             write(solution.getminmax(l-1,r-1));
+//             putchar('\n');
+//         }
         
-    }
-#ifndef ONLINE_JUDGE
-	fclose(stdin);
-	fclose(stdout);
-	system("out.txt");
-#endif
-    return 0;
-}
+//     }
+// #ifndef ONLINE_JUDGE
+// 	fclose(stdin);
+// 	fclose(stdout);
+// 	system("out.txt");
+// #endif
+//     return 0;
+// }

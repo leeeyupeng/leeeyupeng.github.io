@@ -92,7 +92,7 @@ public:
         cout<<"STD_Share_Ptr_A print():"<<a1<<" "<<a2<<endl;
     }
 };
-int main()
+int main_unique_ptr()
 {
     {
         LT::Func_A<int> a4 = LT::getfunc_a<int>();

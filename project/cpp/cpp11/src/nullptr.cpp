@@ -72,6 +72,7 @@ int main_nullptr()
 	{
 		//foo3(nullptr);
 		char *c = 0;
+		char *cc=0;
 		//*c = 'a';
 		foo3(c);
 
@@ -110,6 +111,11 @@ int main_nullptr()
 
 		foo2(pp);
 		foo5(pp);
+
+		A* b = (A*)nullptr;
+		//foo2(b);
+		//foo2((nullptr_t)b);
+		foo2(nullptr);
 
 	}
 	system("PAUSE");
