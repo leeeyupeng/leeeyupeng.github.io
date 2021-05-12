@@ -84,57 +84,57 @@ public:
     }
 
 };
-int main(){
-    int casecounter = 0;
-    int n = 0,m,q;
-    int x,y,z;
-    int oper;
-    Solution solution;
-    while(cin>>n>>m>>q && n > 0){
-        // n = 300;
-        // m = 100000;
-        // q = 100000;
-        casecounter++;
-        solution.init(n);
-        for(int i = 0; i < m; i ++){
-            scanf("%d%d%d",&x,&y,&z);
-            // x = rand()%n;
-            // y = rand()%n;
-            // z = rand()%10000;
-            solution.addedge(x,y,z);
-        }
-        printf("Case %d:\n",casecounter);
-        for(int i = 0; i < q; i ++){
-            scanf("%d%d",&oper,&x);
-            // oper = rand() % 2;
-            // x = rand()%n;
-            if(oper==0){
-                if(solution.isrecaptured(x)){
-                    printf("City %d is already recaptured.\n",x);
-                }
-                else{
+// int main(){
+//     int casecounter = 0;
+//     int n = 0,m,q;
+//     int x,y,z;
+//     int oper;
+//     Solution solution;
+//     while(cin>>n>>m>>q && n > 0){
+//         // n = 300;
+//         // m = 100000;
+//         // q = 100000;
+//         casecounter++;
+//         solution.init(n);
+//         for(int i = 0; i < m; i ++){
+//             scanf("%d%d%d",&x,&y,&z);
+//             // x = rand()%n;
+//             // y = rand()%n;
+//             // z = rand()%10000;
+//             solution.addedge(x,y,z);
+//         }
+//         printf("Case %d:\n",casecounter);
+//         for(int i = 0; i < q; i ++){
+//             scanf("%d%d",&oper,&x);
+//             // oper = rand() % 2;
+//             // x = rand()%n;
+//             if(oper==0){
+//                 if(solution.isrecaptured(x)){
+//                     printf("City %d is already recaptured.\n",x);
+//                 }
+//                 else{
                     
-                    solution.addrecaptured(x);
-                }
-            }
-            else if(oper == 1){
-                scanf("%d",&y);
-                // y = rand()%n;
-                if(solution.isrecaptured(x) && solution.isrecaptured(y)){
-                    auto ret = solution.shortestpath(x,y);
-                    if(ret == INT_MAX){
-                        printf("No such path.\n");
-                    }
-                    else{
-                        printf("%d\n",ret);
-                    }
-                }
-                else{
-                    printf("City %d or %d is not available.\n",x,y);
-                }
-            }
-        }
-        printf("\n");
-    } 
-    return 0;
-}
+//                     solution.addrecaptured(x);
+//                 }
+//             }
+//             else if(oper == 1){
+//                 scanf("%d",&y);
+//                 // y = rand()%n;
+//                 if(solution.isrecaptured(x) && solution.isrecaptured(y)){
+//                     auto ret = solution.shortestpath(x,y);
+//                     if(ret == INT_MAX){
+//                         printf("No such path.\n");
+//                     }
+//                     else{
+//                         printf("%d\n",ret);
+//                     }
+//                 }
+//                 else{
+//                     printf("City %d or %d is not available.\n",x,y);
+//                 }
+//             }
+//         }
+//         printf("\n");
+//     } 
+//     return 0;
+// }
