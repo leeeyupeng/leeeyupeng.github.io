@@ -62,24 +62,24 @@ public:
         return this->GN;
     }
 };
-int main(){
-    int casecounter = 0;
-    int n = 0;
-    int m;
-    int value;
-    Solution solution;
-    while(cin>>n>>m && n > 0){
-        // n = 1000;
-        // m = 10000000;
-        solution.init(n,m);
-        for(int i = 0; i < n; i ++){
-            cin>>value;
-            //value = rand()%10000000;
-            solution.setelement(i,value);
-        }
-        casecounter++;
-        printf("Case %d: %d",casecounter,solution.solve());
-        cout<<endl;
-    }
-    return 0;
-}
+// int main(){
+//     int casecounter = 0;
+//     int n = 0;
+//     int m;
+//     int value;
+//     Solution solution;
+//     while(cin>>n>>m && n > 0){
+//         // n = 1000;
+//         // m = 10000000;
+//         solution.init(n,m);
+//         for(int i = 0; i < n; i ++){
+//             cin>>value;
+//             //value = rand()%10000000;
+//             solution.setelement(i,value);
+//         }
+//         casecounter++;
+//         printf("Case %d: %d",casecounter,solution.solve());
+//         cout<<endl;
+//     }
+//     return 0;
+// }
