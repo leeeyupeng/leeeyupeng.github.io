@@ -23,14 +23,10 @@ class Solution{
 private:
     int n;
     pair<int,int> vn[MAXN];
-    int vnsort[MAXN];
     int ret[MAXN];
 public:
     void init(int n){
         this->n = n;
-        for(int i = 0; i < n; i ++){
-            vnsort[i]=i;
-        }
     }
     void setelement(int i,int x,int y){
         vn[i] = {x,y};
@@ -40,57 +36,20 @@ public:
         return vn[ret[i]];
     }
     void solve(){
-        sort(vnsort,vnsort+n,[this](int a,int b){
-            if(this->vn[a].first==this->vn[b].first){
-                if(this->vn[a].second == this->vn[b].second){
-                    return a<b;
-                }
-                return this->vn[a].second < this->vn[b].second;
-            }
-            return this->vn[a].first < this->vn[b].first;
-        });
-
-        int x,x1,x2;
-        int y,y1,y2;
-        int mid;
         for(int i = 0; i < n; i ++){
-            ret[vnsort[i]] = -1;
-            x = i;
-            while(x<n){            
-                x1 = i + 1;
-                x2 = n;
-                while(x1<x2){
-                    mid = (x1+x2)>>1;
-                    if(vn[vnsort[mid]].first <= vn[vnsort[x]].first){
-                        x1 = mid+1;
+            ret[i] = -1;
+            for(int j = 0; j < n; j++){
+                if(vn[i].first<vn[j].first && vn[i].second <vn[j].second){
+                    if(ret[i] == -1){
+                        ret[i] = j;
                     }
-                    else{
-                        x2 = mid;
+                    else if(vn[j].first < vn[ret[i]].first){
+                        ret[i] = j;
                     }
-                }
-                x = x1;
-                if(x==n){break;}
-
-                y1 = x;y2 = n;
-                while(y1<y2){
-                    mid = (y1+y2)>>1;
-                    if(vn[vnsort[mid]].first != vn[vnsort[x]].first){
-                        y2 = mid;
-                    }
-                    else if(vn[vnsort[mid]].second <= vn[vnsort[i]].second){
-                        y1 = mid+1;
-                    }
-                    else{
-                        y2 = mid;
+                    else if(vn[j].first == vn[ret[i]].first && vn[j].second < vn[ret[i]].second){
+                        ret[i] = j;
                     }
                 }
-                y = y1;
-                if(y==n){continue;}
-                if(vn[vnsort[y]].first!=vn[vnsort[x]].first){continue;}
-                else{
-                    ret[vnsort[i]]  = vnsort[y];
-                    break;
-                }            
             }
         }
     }
