@@ -43,19 +43,19 @@ public:
         return dp[n][k];
     }
 };
-int main(){
-    int testcases;
-    cin>>testcases;
-    Solution solution;
-    solution.cacl();
-    int n,k;
-    int value;
-    for(int i = 0; i<testcases; i ++){
-        cin>>n>>k;
-        solution.init(n,k);
+// int main(){
+//     int testcases;
+//     cin>>testcases;
+//     Solution solution;
+//     solution.cacl();
+//     int n,k;
+//     int value;
+//     for(int i = 0; i<testcases; i ++){
+//         cin>>n>>k;
+//         solution.init(n,k);
 
-        auto ret = solution.solve();
-        cout<<ret<<endl;
-    }
-    return 0;
-}
+//         auto ret = solution.solve();
+//         cout<<ret<<endl;
+//     }
+//     return 0;
+// }
