@@ -158,7 +158,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/Linux/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6.html">
+    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/cpp/multithreading/%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/icon128.jpg">
@@ -172,7 +172,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/Linux/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6.html" class="post-title-link" itemprop="url">垃圾回收</a>
+            <a href="/cpp/multithreading/%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C.html" class="post-title-link" itemprop="url">并发与并行</a>
         </h2>
 
         <div class="post-meta">
@@ -190,16 +190,16 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                  <a href="/categories/C-C/" itemprop="url" rel="index"><span itemprop="name">C/C++</span></a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">编译原理</span></a>
+                  <a href="/categories/C-C/multithreading/" itemprop="url" rel="index"><span itemprop="name">multithreading</span></a>
                 </span>
             </span>
 
           
-            <span id="/Linux/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6.html" class="post-meta-item leancloud_visitors" data-flag-title="垃圾回收" title="阅读次数">
+            <span id="/cpp/multithreading/%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C.html" class="post-meta-item leancloud_visitors" data-flag-title="并发与并行" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -214,8 +214,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/Linux/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/Linux/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6.html" itemprop="commentCount"></span>
+    <a title="valine" href="/cpp/multithreading/%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/cpp/multithreading/%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -230,10 +230,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h1>
+          <h1 id="并发与并行"><a href="#并发与并行" class="headerlink" title="并发与并行"></a>并发与并行</h1><ul>
+<li>并发：同一时间段内可以交替处理多个操作，强调同一时段内交替发生。</li>
+<li>并行：同一时刻内同时处理多个操作，强调同一时刻点同时发生。</li>
+</ul>
+
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/Linux/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6.html#more" rel="contents">
+              <a class="btn" href="/cpp/multithreading/%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -662,112 +666,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1039.%20%E5%A4%9A%E8%BE%B9%E5%BD%A2%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86%E7%9A%84%E6%9C%80%E4%BD%8E%E5%BE%97%E5%88%86.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/icon128.jpg">
-      <meta itemprop="name" content="leeyupeng">
-      <meta itemprop="description" content="leeyupeng@126.com">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="leeyupeng">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1039.%20%E5%A4%9A%E8%BE%B9%E5%BD%A2%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86%E7%9A%84%E6%9C%80%E4%BD%8E%E5%BE%97%E5%88%86.html" class="post-title-link" itemprop="url">leetcode.1039. 多边形三角剖分的最低得分</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-09-11 17:13:46" itemprop="dateCreated datePublished" datetime="2020-09-11T17:13:46+08:00">2020-09-11</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1039.%20%E5%A4%9A%E8%BE%B9%E5%BD%A2%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86%E7%9A%84%E6%9C%80%E4%BD%8E%E5%BE%97%E5%88%86.html" class="post-meta-item leancloud_visitors" data-flag-title="leetcode.1039. 多边形三角剖分的最低得分" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1039.%20%E5%A4%9A%E8%BE%B9%E5%BD%A2%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86%E7%9A%84%E6%9C%80%E4%BD%8E%E5%BE%97%E5%88%86.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1039.%20%E5%A4%9A%E8%BE%B9%E5%BD%A2%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86%E7%9A%84%E6%9C%80%E4%BD%8E%E5%BE%97%E5%88%86.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="leetcode-1039-多边形三角剖分的最低得分"><a href="#leetcode-1039-多边形三角剖分的最低得分" class="headerlink" title="leetcode.1039. 多边形三角剖分的最低得分"></a>leetcode.1039. 多边形三角剖分的最低得分</h1><hr>
-<p>给定 N，想象一个凸 N 边多边形，其顶点按顺时针顺序依次标记为 A[0], A[i], …, A[N-1]。</p>
-<p>假设您将多边形剖分为 N-2 个三角形。对于每个三角形，该三角形的值是顶点标记的乘积，三角剖分的分数是进行三角剖分后所有 N-2 个三角形的值之和。</p>
-<p>返回多边形进行三角剖分后可以得到的最低分。</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/minimum-score-triangulation-of-polygon" target="_blank" rel="noopener">https://leetcode-cn.com/problems/minimum-score-triangulation-of-polygon</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
-<hr>
-<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><hr>
-<p>dp[i][j] 代表从i到j组成的多边形的最低分<br>k代表[i,j]之间的任意一点<br>转移方程：dp[i][j] = min(dp[i][j], dp[i][k] + A[i] * A[k] * A[j] + dp[k][j]);</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1039.%20%E5%A4%9A%E8%BE%B9%E5%BD%A2%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86%E7%9A%84%E6%9C%80%E4%BD%8E%E5%BE%97%E5%88%86.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1044.%20%E6%9C%80%E9%95%BF%E9%87%8D%E5%A4%8D%E5%AD%90%E4%B8%B2.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -870,7 +768,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/127.%E5%8D%95%E8%AF%8D%E6%8E%A5%E9%BE%99.html">
+    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1039.%20%E5%A4%9A%E8%BE%B9%E5%BD%A2%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86%E7%9A%84%E6%9C%80%E4%BD%8E%E5%BE%97%E5%88%86.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/icon128.jpg">
@@ -884,7 +782,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/127.%E5%8D%95%E8%AF%8D%E6%8E%A5%E9%BE%99.html" class="post-title-link" itemprop="url">leetcode.127.单词接龙</a>
+            <a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1039.%20%E5%A4%9A%E8%BE%B9%E5%BD%A2%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86%E7%9A%84%E6%9C%80%E4%BD%8E%E5%BE%97%E5%88%86.html" class="post-title-link" itemprop="url">leetcode.1039. 多边形三角剖分的最低得分</a>
         </h2>
 
         <div class="post-meta">
@@ -911,7 +809,7 @@
             </span>
 
           
-            <span id="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/127.%E5%8D%95%E8%AF%8D%E6%8E%A5%E9%BE%99.html" class="post-meta-item leancloud_visitors" data-flag-title="leetcode.127.单词接龙" title="阅读次数">
+            <span id="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1039.%20%E5%A4%9A%E8%BE%B9%E5%BD%A2%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86%E7%9A%84%E6%9C%80%E4%BD%8E%E5%BE%97%E5%88%86.html" class="post-meta-item leancloud_visitors" data-flag-title="leetcode.1039. 多边形三角剖分的最低得分" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -926,8 +824,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/127.%E5%8D%95%E8%AF%8D%E6%8E%A5%E9%BE%99.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/127.%E5%8D%95%E8%AF%8D%E6%8E%A5%E9%BE%99.html" itemprop="commentCount"></span>
+    <a title="valine" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1039.%20%E5%A4%9A%E8%BE%B9%E5%BD%A2%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86%E7%9A%84%E6%9C%80%E4%BD%8E%E5%BE%97%E5%88%86.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1039.%20%E5%A4%9A%E8%BE%B9%E5%BD%A2%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86%E7%9A%84%E6%9C%80%E4%BD%8E%E5%BE%97%E5%88%86.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -942,25 +840,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="单词接龙"><a href="#单词接龙" class="headerlink" title="单词接龙"></a>单词接龙</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><hr>
-<p>给定两个单词（beginWord 和 endWord）和一个字典，找到从 beginWord 到 endWord 的最短转换序列的长度。转换需遵循如下规则：</p>
-<ul>
-<li>1.每次转换只能改变一个字母。</li>
-<li>2.转换过程中的中间单词必须是字典中的单词。</li>
-</ul>
-<p>说明:</p>
-<ul>
-<li>1.如果不存在这样的转换序列，返回 0。</li>
-<li>2.所有单词具有相同的长度。</li>
-<li>3.所有单词只由小写字母组成。</li>
-<li>4.字典中不存在重复的单词。</li>
-<li>5.你可以假设 beginWord 和 endWord 是非空的，且二者不相同。  </li>
-</ul>
+          <h1 id="leetcode-1039-多边形三角剖分的最低得分"><a href="#leetcode-1039-多边形三角剖分的最低得分" class="headerlink" title="leetcode.1039. 多边形三角剖分的最低得分"></a>leetcode.1039. 多边形三角剖分的最低得分</h1><hr>
+<p>给定 N，想象一个凸 N 边多边形，其顶点按顺时针顺序依次标记为 A[0], A[i], …, A[N-1]。</p>
+<p>假设您将多边形剖分为 N-2 个三角形。对于每个三角形，该三角形的值是顶点标记的乘积，三角剖分的分数是进行三角剖分后所有 N-2 个三角形的值之和。</p>
+<p>返回多边形进行三角剖分后可以得到的最低分。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/minimum-score-triangulation-of-polygon" target="_blank" rel="noopener">https://leetcode-cn.com/problems/minimum-score-triangulation-of-polygon</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 <hr>
-<h2 id="BFS"><a href="#BFS" class="headerlink" title="BFS"></a>BFS</h2><h3 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h3>
+<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><hr>
+<p>dp[i][j] 代表从i到j组成的多边形的最低分<br>k代表[i,j]之间的任意一点<br>转移方程：dp[i][j] = min(dp[i][j], dp[i][k] + A[i] * A[k] * A[j] + dp[k][j]);</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/127.%E5%8D%95%E8%AF%8D%E6%8E%A5%E9%BE%99.html#more" rel="contents">
+              <a class="btn" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1039.%20%E5%A4%9A%E8%BE%B9%E5%BD%A2%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86%E7%9A%84%E6%9C%80%E4%BD%8E%E5%BE%97%E5%88%86.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1090,7 +980,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1510.%20%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8F%20IV.html">
+    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1231.%E5%88%86%E4%BA%AB%E5%B7%A7%E5%85%8B%E5%8A%9B.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/icon128.jpg">
@@ -1104,7 +994,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1510.%20%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8F%20IV.html" class="post-title-link" itemprop="url">leetcode.1510. 石子游戏 IV</a>
+            <a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1231.%E5%88%86%E4%BA%AB%E5%B7%A7%E5%85%8B%E5%8A%9B.html" class="post-title-link" itemprop="url">leetcode.1231.分享巧克力</a>
         </h2>
 
         <div class="post-meta">
@@ -1131,7 +1021,7 @@
             </span>
 
           
-            <span id="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1510.%20%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8F%20IV.html" class="post-meta-item leancloud_visitors" data-flag-title="leetcode.1510. 石子游戏 IV" title="阅读次数">
+            <span id="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1231.%E5%88%86%E4%BA%AB%E5%B7%A7%E5%85%8B%E5%8A%9B.html" class="post-meta-item leancloud_visitors" data-flag-title="leetcode.1231.分享巧克力" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -1146,8 +1036,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1510.%20%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8F%20IV.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1510.%20%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8F%20IV.html" itemprop="commentCount"></span>
+    <a title="valine" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1231.%E5%88%86%E4%BA%AB%E5%B7%A7%E5%85%8B%E5%8A%9B.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1231.%E5%88%86%E4%BA%AB%E5%B7%A7%E5%85%8B%E5%8A%9B.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1162,16 +1052,131 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>Alice 和 Bob 两个人轮流玩一个游戏，Alice 先手。</p>
-<p>一开始，有 n 个石子堆在一起。每个人轮流操作，正在操作的玩家可以从石子堆里拿走 任意 非零 平方数 个石子。</p>
-<p>如果石子堆里没有石子了，则无法操作的玩家输掉游戏。</p>
-<p>给你正整数 n ，且已知两个人都采取最优策略。如果 Alice 会赢得比赛，那么返回 True ，否则返回 False 。</p>
-<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><p>dp[i] 代表i个石子，Alice是否会赢得比赛<br>转移方程 dp[i] = dp[i] || !dp[i - j * j]; (j &gt; 0, j*j&lt;=i)</p>
-<p><a href="\project\algorithm\leetcode\src\winnerSquareGame.cpp">winnerSquareGame.cpp</a></p>
-<h2 id="记忆化搜索"><a href="#记忆化搜索" class="headerlink" title="记忆化搜索"></a>记忆化搜索</h2><p><a href="\project\algorithm\leetcode\src\winnerSquareGame_1.cpp">winnerSquareGame_1.cpp</a></p>
+          <h1 id="分享巧克力"><a href="#分享巧克力" class="headerlink" title="分享巧克力"></a>分享巧克力</h1><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><hr>
+<p>你有一大块巧克力，它由一些甜度不完全相同的小块组成。我们用数组 sweetness 来表示每一小块的甜度。  </p>
+<p>你打算和 K 名朋友一起分享这块巧克力，所以你需要将切割 K 次才能得到 K+1 块，每一块都由一些 连续 的小块组成。  </p>
+<p>为了表现出你的慷慨，你将会吃掉 总甜度最小 的一块，并将其余几块分给你的朋友们。  </p>
+<p>请找出一个最佳的切割策略，使得你所分得的巧克力 总甜度最大，并返回这个 最大总甜度。  </p>
+<p>输入： sweetness = [1,2,3,4,5,6,7,8,9], K = 5<br>输出： 6<br>解释： 你可以把巧克力分成 [1,2,3], [4,5], [6], [7], [8], [9]。  。</p>
+<p>输入： sweetness = [5,6,7,8,9,1,2,3,4], K = 8<br>输出： 1<br>解释： 只有一种办法可以把巧克力分成 9 块。  </p>
+<hr>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1510.%20%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8F%20IV.html#more" rel="contents">
+              <a class="btn" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1231.%E5%88%86%E4%BA%AB%E5%B7%A7%E5%85%8B%E5%8A%9B.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/127.%E5%8D%95%E8%AF%8D%E6%8E%A5%E9%BE%99.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/icon128.jpg">
+      <meta itemprop="name" content="leeyupeng">
+      <meta itemprop="description" content="leeyupeng@126.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="leeyupeng">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/127.%E5%8D%95%E8%AF%8D%E6%8E%A5%E9%BE%99.html" class="post-title-link" itemprop="url">leetcode.127.单词接龙</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-09-11 17:13:46" itemprop="dateCreated datePublished" datetime="2020-09-11T17:13:46+08:00">2020-09-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/127.%E5%8D%95%E8%AF%8D%E6%8E%A5%E9%BE%99.html" class="post-meta-item leancloud_visitors" data-flag-title="leetcode.127.单词接龙" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/127.%E5%8D%95%E8%AF%8D%E6%8E%A5%E9%BE%99.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/127.%E5%8D%95%E8%AF%8D%E6%8E%A5%E9%BE%99.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="单词接龙"><a href="#单词接龙" class="headerlink" title="单词接龙"></a>单词接龙</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><hr>
+<p>给定两个单词（beginWord 和 endWord）和一个字典，找到从 beginWord 到 endWord 的最短转换序列的长度。转换需遵循如下规则：</p>
+<ul>
+<li>1.每次转换只能改变一个字母。</li>
+<li>2.转换过程中的中间单词必须是字典中的单词。</li>
+</ul>
+<p>说明:</p>
+<ul>
+<li>1.如果不存在这样的转换序列，返回 0。</li>
+<li>2.所有单词具有相同的长度。</li>
+<li>3.所有单词只由小写字母组成。</li>
+<li>4.字典中不存在重复的单词。</li>
+<li>5.你可以假设 beginWord 和 endWord 是非空的，且二者不相同。  </li>
+</ul>
+<hr>
+<h2 id="BFS"><a href="#BFS" class="headerlink" title="BFS"></a>BFS</h2><h3 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h3>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/127.%E5%8D%95%E8%AF%8D%E6%8E%A5%E9%BE%99.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>

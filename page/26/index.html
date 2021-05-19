@@ -370,7 +370,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2.html">
+    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/Transformation.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/icon128.jpg">
@@ -384,7 +384,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2.html" class="post-title-link" itemprop="url">空间变换</a>
+            <a href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/Transformation.html" class="post-title-link" itemprop="url">Transformation</a>
         </h2>
 
         <div class="post-meta">
@@ -411,7 +411,7 @@
             </span>
 
           
-            <span id="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2.html" class="post-meta-item leancloud_visitors" data-flag-title="空间变换" title="阅读次数">
+            <span id="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/Transformation.html" class="post-meta-item leancloud_visitors" data-flag-title="Transformation" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -426,8 +426,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2.html" itemprop="commentCount"></span>
+    <a title="valine" href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/Transformation.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/Transformation.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -442,15 +442,39 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="空间变换"><a href="#空间变换" class="headerlink" title="空间变换"></a>空间变换</h1><h2 id="空间变换和矩阵变换"><a href="#空间变换和矩阵变换" class="headerlink" title="空间变换和矩阵变换"></a>空间变换和矩阵变换</h2><h2 id="根据变换操作求变换矩阵"><a href="#根据变换操作求变换矩阵" class="headerlink" title="根据变换操作求变换矩阵"></a>根据变换操作求变换矩阵</h2><h2 id="本地坐标系和世界坐标系的相互变换-本地空间和世界空间"><a href="#本地坐标系和世界坐标系的相互变换-本地空间和世界空间" class="headerlink" title="本地坐标系和世界坐标系的相互变换(本地空间和世界空间)"></a>本地坐标系和世界坐标系的相互变换(本地空间和世界空间)</h2><ul>
-<li>已知世界坐标点和变换操作，计算变换矩阵，求本地坐标点</li>
-<li>已知本地坐标点和变换操作，计算变换矩阵，求世界坐标点</li>
-<li>已知世界坐标系和本地坐标系，计算变换矩阵  </li>
-</ul>
-<h2 id="视图变换-摄像机坐标系"><a href="#视图变换-摄像机坐标系" class="headerlink" title="视图变换(摄像机坐标系)"></a>视图变换(摄像机坐标系)</h2><h2 id="投影变换"><a href="#投影变换" class="headerlink" title="投影变换"></a>投影变换</h2><h3 id="正交投影"><a href="#正交投影" class="headerlink" title="正交投影"></a>正交投影</h3><h3 id="透视投影"><a href="#透视投影" class="headerlink" title="透视投影"></a>透视投影</h3>
+          <h1 id="Transformation"><a href="#Transformation" class="headerlink" title="Transformation"></a>Transformation</h1><h2 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h2><script type="math/tex; mode=display">R_{xyz}(\alpha,\beta,\gamma)=R_{x}(\alpha)R_{y}(\beta)R_{z}(\gamma)</script><script type="math/tex; mode=display">R_{x}(\alpha)=
+\begin{bmatrix}
+1&0&0&0\\
+0&cos{\alpha}&-sin{\alpha}&0\\
+0&sin{\alpha}&cos{\alpha}&0\\
+0&0&0&1\\
+\end{bmatrix}</script><script type="math/tex; mode=display">R_{y}(\beta)=
+\begin{bmatrix}
+cos{\beta}&0&sin{\beta}&0\\
+0&0&0&0\\
+-sin{\beta}&0&cos{\beta}&0\\
+0&0&0&1\\
+\end{bmatrix}</script><script type="math/tex; mode=display">R_{z}(\gamma)=
+\begin{bmatrix}
+cos{\gamma}&-sin{\gamma}&0&0\\
+sin{\gamma}&cos{\gamma}&0&0\\
+0&0&0&0\\
+0&0&0&1\\
+\end{bmatrix}</script><h2 id="缩放"><a href="#缩放" class="headerlink" title="缩放"></a>缩放</h2><script type="math/tex; mode=display">S_{(s_x,s_y,s_z)}\begin{bmatrix}
+s_x&0&0&0\\
+0&s_y&0&0\\
+0&0&s_z&0\\
+0&0&0&1\\
+\end{bmatrix}</script><h2 id="齐次坐标"><a href="#齐次坐标" class="headerlink" title="齐次坐标"></a>齐次坐标</h2><h2 id="平移"><a href="#平移" class="headerlink" title="平移"></a>平移</h2><script type="math/tex; mode=display">T_{(t_x,t_y,t_z)}=\begin{bmatrix}
+1&0&0&t_x\\
+0&1&0&t_y\\
+0&0&1&t_z\\
+0&0&0&1\\
+\end{bmatrix}</script><h2 id="模型变换Modeling"><a href="#模型变换Modeling" class="headerlink" title="模型变换Modeling"></a>模型变换Modeling</h2><h2 id="视图变换View"><a href="#视图变换View" class="headerlink" title="视图变换View"></a>视图变换View</h2><p>Camera Position<br>Camera LookAt<br>Camera UpDirection</p>
+<h2 id="投影变换Projection"><a href="#投影变换Projection" class="headerlink" title="投影变换Projection"></a>投影变换Projection</h2><h3 id="Orthographic-Projection"><a href="#Orthographic-Projection" class="headerlink" title="Orthographic Projection"></a>Orthographic Projection</h3>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2.html#more" rel="contents">
+              <a class="btn" href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/Transformation.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -591,7 +615,7 @@ R(\theta)
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/Transformation.html">
+    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/icon128.jpg">
@@ -605,7 +629,7 @@ R(\theta)
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/Transformation.html" class="post-title-link" itemprop="url">Transformation</a>
+            <a href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2.html" class="post-title-link" itemprop="url">空间变换</a>
         </h2>
 
         <div class="post-meta">
@@ -632,7 +656,7 @@ R(\theta)
             </span>
 
           
-            <span id="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/Transformation.html" class="post-meta-item leancloud_visitors" data-flag-title="Transformation" title="阅读次数">
+            <span id="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2.html" class="post-meta-item leancloud_visitors" data-flag-title="空间变换" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -647,8 +671,8 @@ R(\theta)
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/Transformation.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/Transformation.html" itemprop="commentCount"></span>
+    <a title="valine" href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -663,39 +687,15 @@ R(\theta)
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Transformation"><a href="#Transformation" class="headerlink" title="Transformation"></a>Transformation</h1><h2 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h2><script type="math/tex; mode=display">R_{xyz}(\alpha,\beta,\gamma)=R_{x}(\alpha)R_{y}(\beta)R_{z}(\gamma)</script><script type="math/tex; mode=display">R_{x}(\alpha)=
-\begin{bmatrix}
-1&0&0&0\\
-0&cos{\alpha}&-sin{\alpha}&0\\
-0&sin{\alpha}&cos{\alpha}&0\\
-0&0&0&1\\
-\end{bmatrix}</script><script type="math/tex; mode=display">R_{y}(\beta)=
-\begin{bmatrix}
-cos{\beta}&0&sin{\beta}&0\\
-0&0&0&0\\
--sin{\beta}&0&cos{\beta}&0\\
-0&0&0&1\\
-\end{bmatrix}</script><script type="math/tex; mode=display">R_{z}(\gamma)=
-\begin{bmatrix}
-cos{\gamma}&-sin{\gamma}&0&0\\
-sin{\gamma}&cos{\gamma}&0&0\\
-0&0&0&0\\
-0&0&0&1\\
-\end{bmatrix}</script><h2 id="缩放"><a href="#缩放" class="headerlink" title="缩放"></a>缩放</h2><script type="math/tex; mode=display">S_{(s_x,s_y,s_z)}\begin{bmatrix}
-s_x&0&0&0\\
-0&s_y&0&0\\
-0&0&s_z&0\\
-0&0&0&1\\
-\end{bmatrix}</script><h2 id="齐次坐标"><a href="#齐次坐标" class="headerlink" title="齐次坐标"></a>齐次坐标</h2><h2 id="平移"><a href="#平移" class="headerlink" title="平移"></a>平移</h2><script type="math/tex; mode=display">T_{(t_x,t_y,t_z)}=\begin{bmatrix}
-1&0&0&t_x\\
-0&1&0&t_y\\
-0&0&1&t_z\\
-0&0&0&1\\
-\end{bmatrix}</script><h2 id="模型变换Modeling"><a href="#模型变换Modeling" class="headerlink" title="模型变换Modeling"></a>模型变换Modeling</h2><h2 id="视图变换View"><a href="#视图变换View" class="headerlink" title="视图变换View"></a>视图变换View</h2><p>Camera Position<br>Camera LookAt<br>Camera UpDirection</p>
-<h2 id="投影变换Projection"><a href="#投影变换Projection" class="headerlink" title="投影变换Projection"></a>投影变换Projection</h2><h3 id="Orthographic-Projection"><a href="#Orthographic-Projection" class="headerlink" title="Orthographic Projection"></a>Orthographic Projection</h3>
+          <h1 id="空间变换"><a href="#空间变换" class="headerlink" title="空间变换"></a>空间变换</h1><h2 id="空间变换和矩阵变换"><a href="#空间变换和矩阵变换" class="headerlink" title="空间变换和矩阵变换"></a>空间变换和矩阵变换</h2><h2 id="根据变换操作求变换矩阵"><a href="#根据变换操作求变换矩阵" class="headerlink" title="根据变换操作求变换矩阵"></a>根据变换操作求变换矩阵</h2><h2 id="本地坐标系和世界坐标系的相互变换-本地空间和世界空间"><a href="#本地坐标系和世界坐标系的相互变换-本地空间和世界空间" class="headerlink" title="本地坐标系和世界坐标系的相互变换(本地空间和世界空间)"></a>本地坐标系和世界坐标系的相互变换(本地空间和世界空间)</h2><ul>
+<li>已知世界坐标点和变换操作，计算变换矩阵，求本地坐标点</li>
+<li>已知本地坐标点和变换操作，计算变换矩阵，求世界坐标点</li>
+<li>已知世界坐标系和本地坐标系，计算变换矩阵  </li>
+</ul>
+<h2 id="视图变换-摄像机坐标系"><a href="#视图变换-摄像机坐标系" class="headerlink" title="视图变换(摄像机坐标系)"></a>视图变换(摄像机坐标系)</h2><h2 id="投影变换"><a href="#投影变换" class="headerlink" title="投影变换"></a>投影变换</h2><h3 id="正交投影"><a href="#正交投影" class="headerlink" title="正交投影"></a>正交投影</h3><h3 id="透视投影"><a href="#透视投影" class="headerlink" title="透视投影"></a>透视投影</h3>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/Transformation.html#more" rel="contents">
+              <a class="btn" href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Transformation/%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -906,6 +906,102 @@ s_x&0&0&0\\
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/history.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/icon128.jpg">
+      <meta itemprop="name" content="leeyupeng">
+      <meta itemprop="description" content="leeyupeng@126.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="leeyupeng">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/history.html" class="post-title-link" itemprop="url">OPENGL History</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-15 12:39:25" itemprop="dateCreated datePublished" datetime="2020-07-15T12:39:25+08:00">2020-07-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenGL/" itemprop="url" rel="index"><span itemprop="name">OpenGL</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/history.html" class="post-meta-item leancloud_visitors" data-flag-title="OPENGL History" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/history.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/history.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="/images/opengl/opengl.jpg" alt><br><img src="/images/opengl/history.jpg" alt>  </p>
+<h1 id="OpenGL-2-0"><a href="#OpenGL-2-0" class="headerlink" title="OpenGL 2.0"></a>OpenGL 2.0</h1><h1 id="OpenGL-3-0"><a href="#OpenGL-3-0" class="headerlink" title="OpenGL 3.0"></a>OpenGL 3.0</h1><h1 id="OpenGL-3-3"><a href="#OpenGL-3-3" class="headerlink" title="OpenGL 3.3"></a>OpenGL 3.3</h1><h1 id="OpenGL-4-0"><a href="#OpenGL-4-0" class="headerlink" title="OpenGL 4.0"></a>OpenGL 4.0</h1>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/history.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/assembly.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -985,102 +1081,6 @@ s_x&0&0&0\\
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/assembly.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/history.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/icon128.jpg">
-      <meta itemprop="name" content="leeyupeng">
-      <meta itemprop="description" content="leeyupeng@126.com">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="leeyupeng">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/history.html" class="post-title-link" itemprop="url">OPENGL History</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-15 12:39:25" itemprop="dateCreated datePublished" datetime="2020-07-15T12:39:25+08:00">2020-07-15</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OpenGL/" itemprop="url" rel="index"><span itemprop="name">OpenGL</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/history.html" class="post-meta-item leancloud_visitors" data-flag-title="OPENGL History" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/history.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/history.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="/images/opengl/opengl.jpg" alt><br><img src="/images/opengl/history.jpg" alt>  </p>
-<h1 id="OpenGL-2-0"><a href="#OpenGL-2-0" class="headerlink" title="OpenGL 2.0"></a>OpenGL 2.0</h1><h1 id="OpenGL-3-0"><a href="#OpenGL-3-0" class="headerlink" title="OpenGL 3.0"></a>OpenGL 3.0</h1><h1 id="OpenGL-3-3"><a href="#OpenGL-3-3" class="headerlink" title="OpenGL 3.3"></a>OpenGL 3.3</h1><h1 id="OpenGL-4-0"><a href="#OpenGL-4-0" class="headerlink" title="OpenGL 4.0"></a>OpenGL 4.0</h1>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/history.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>

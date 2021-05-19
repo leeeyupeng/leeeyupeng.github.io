@@ -1101,7 +1101,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/cmake.html">
+    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/make.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/icon128.jpg">
@@ -1115,7 +1115,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/cmake.html" class="post-title-link" itemprop="url">cmake</a>
+            <a href="/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/make.html" class="post-title-link" itemprop="url">make</a>
         </h2>
 
         <div class="post-meta">
@@ -1138,7 +1138,7 @@
             </span>
 
           
-            <span id="/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/cmake.html" class="post-meta-item leancloud_visitors" data-flag-title="cmake" title="阅读次数">
+            <span id="/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/make.html" class="post-meta-item leancloud_visitors" data-flag-title="make" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -1153,8 +1153,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/cmake.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/cmake.html" itemprop="commentCount"></span>
+    <a title="valine" href="/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/make.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/make.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1169,14 +1169,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="cmake"><a href="#cmake" class="headerlink" title="cmake"></a>cmake</h1><hr>
-<p>跨平台的安装（编译）工具<br>CMake是一个跨平台的安装（编译）工具，可以用简单的语句来描述所有平台的安装(编译过程)。他能够输出各种各样的makefile或者project文件，能测试编译器所支持的C++特性,类似UNIX下的automake。只是 CMake 的组态档取名为 CMakeLists.txt。Cmake 并不直接建构出最终的软件，而是产生标准的建构档（如 Unix 的 Makefile 或 Windows Visual C++ 的 projects/workspaces），然后再依一般的建构方式使用。这使得熟悉某个集成开发环境（IDE）的开发者可以用标准的方式建构他的软件，这种可以使用各平台的原生建构系统的能力是 CMake 和 SCons 等其他类似系统的区别之处。  </p>
-<hr>
-<h2 id="单项目构建"><a href="#单项目构建" class="headerlink" title="单项目构建"></a>单项目构建</h2><h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">cmake_minimum_required(VERSION <span class="number">3.3</span><span class="number">.0</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta"># specify the C++ standard</span></span><br><span class="line"><span class="built_in">set</span>(CMAKE_CXX_STANDARD <span class="number">11</span>)</span><br><span class="line"></span><br><span class="line">project(TESTCMAKE VERSION <span class="number">1.12</span><span class="number">.7</span>)</span><br><span class="line"><span class="built_in">set</span>(TESTCMAKE_SOVERSION $&#123;TESTCMAKE_VERSION&#125;)</span><br><span class="line"></span><br><span class="line">INCLUDE_DIRECTORIES($&#123;PROJECT_SOURCE_DIR&#125;/include)	   </span><br><span class="line">INCLUDE_DIRECTORIES($&#123;PROJECT_SOURCE_DIR&#125;/include2)</span><br><span class="line"></span><br><span class="line">FILE(GLOB testgroup <span class="string">"./testgroup/src\/*.cpp"</span> <span class="string">"./testgroup/include\/*.h"</span>)</span><br><span class="line">source_group(testgroup FILES $&#123;testgroup&#125;)</span><br><span class="line">add_executable(TESTCMAKE src/TESTCMAKE.cpp include/TESTCMAKE.h $&#123;testgroup&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="模快组织"><a href="#模快组织" class="headerlink" title="模快组织"></a>模快组织</h3><h3 id="文件目录结构"><a href="#文件目录结构" class="headerlink" title="文件目录结构"></a>文件目录结构</h3><h4 id="头文件和源文件分离"><a href="#头文件和源文件分离" class="headerlink" title="头文件和源文件分离"></a>头文件和源文件分离</h4>
+          <h2 id="DEBUG和RELEASE"><a href="#DEBUG和RELEASE" class="headerlink" title="DEBUG和RELEASE"></a>DEBUG和RELEASE</h2><p>make ver=debug<br>make ver=release</p>
+
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/cmake.html#more" rel="contents">
+              <a class="btn" href="/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/make.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
