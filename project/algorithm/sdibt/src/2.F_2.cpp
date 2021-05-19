@@ -56,28 +56,28 @@ public:
         }
     }
 };
-int main(){
-    int testcases=1;
-    //cin>>testcases;
-    Solution solution;
-    int n;
-    int d=5;
-    double value;
-    while(cin>>n){
-        //cin>>n;//>>d;
-        solution.init(n,d);
-        for(int j = 0; j < n; j ++){
-            for(int id = 0; id < d; id ++){
-                scanf("%lf",&value);
-                //cin>>value;
-                solution.insert(j,id,value);
-            }
-        }
+// int main(){
+//     int testcases=1;
+//     //cin>>testcases;
+//     Solution solution;
+//     int n;
+//     int d=5;
+//     double value;
+//     while(cin>>n){
+//         //cin>>n;//>>d;
+//         solution.init(n,d);
+//         for(int j = 0; j < n; j ++){
+//             for(int id = 0; id < d; id ++){
+//                 scanf("%lf",&value);
+//                 //cin>>value;
+//                 solution.insert(j,id,value);
+//             }
+//         }
 
-        double ret = solution.solve();
-        printf("%.2f\n",ret);
-        // cout<<setiosflags(ios::fixed)<<setprecision(2);
-        // cout<<ret<<endl;
-    }
-    return 0;
-}
+//         double ret = solution.solve();
+//         printf("%.2f\n",ret);
+//         // cout<<setiosflags(ios::fixed)<<setprecision(2);
+//         // cout<<ret<<endl;
+//     }
+//     return 0;
+// }

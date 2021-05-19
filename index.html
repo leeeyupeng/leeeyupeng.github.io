@@ -295,7 +295,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-18 19:09:51" itemprop="dateModified" datetime="2021-05-18T19:09:51+08:00">2021-05-18</time>
+                <time title="修改时间：2021-05-19 12:30:56" itemprop="dateModified" datetime="2021-05-19T12:30:56+08:00">2021-05-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -344,12 +344,13 @@
 
       
           <h1 id="山东省第二届ACM大学生程序设计竞赛"><a href="#山东省第二届ACM大学生程序设计竞赛" class="headerlink" title="山东省第二届ACM大学生程序设计竞赛"></a>山东省第二届ACM大学生程序设计竞赛</h1><h2 id="题目A-Simple-Game"><a href="#题目A-Simple-Game" class="headerlink" title="题目A  Simple Game"></a>题目A  Simple Game</h2><p><a href="https://acm.sdut.edu.cn/onlinejudge3/problems/2161" target="_blank" rel="noopener">题目链接</a></p>
-<pre><code>  知识点:Nim博弈
+<pre><code>  知识点:Nim博弈2
 </code></pre><p><a href="/project/algorithm/sdibt/src/2.A_4.cpp">code</a></p>
-<h2 id="题目F-Manhattan"><a href="#题目F-Manhattan" class="headerlink" title="题目F  Manhattan"></a>题目F  Manhattan</h2><p><a href="https://acm.sdut.edu.cn/onlinejudge3/problems/2166" target="_blank" rel="noopener">题目链接</a></p>
-<pre><code>  知识点:曼哈顿距离
-</code></pre><p><a href="/project/algorithm/sdibt/src/2.F_1.cpp">code</a></p>
-<p>相关题目<br><a href="http://poj.org/problem?id=2926" target="_blank" rel="noopener">poj.2926.Requirements</a><br><a href="/project/algorithm/sdibt/src/2.F_2.cpp">poj.2926.code</a></p>
+<h2 id="题目D-Binomial-Coeffcients"><a href="#题目D-Binomial-Coeffcients" class="headerlink" title="题目D  Binomial Coeffcients"></a>题目D  Binomial Coeffcients</h2><p><a href="https://acm.sdut.edu.cn/onlinejudge3/problems/2164" target="_blank" rel="noopener">题目链接</a></p>
+<pre><code>  知识点:组合 动态规划
+  $C_{n}^{k}=C_{n-1}^{k-1} + C_{n-1}^{k}$
+</code></pre><p><a href="/project/algorithm/sdibt/src/2.D.cpp">code</a></p>
+<h2 id="题目F-Manhattan"><a href="#题目F-Manhattan" class="headerlink" title="题目F  Manhattan"></a>题目F  Manhattan</h2>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/sdibt/%E5%B1%B1%E4%B8%9C%E7%9C%81%E7%AC%AC%E4%BA%8C%E5%B1%8AACM%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B.html#more" rel="contents">
@@ -1508,6 +1509,59 @@
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
