@@ -84,25 +84,25 @@ public:
         return ret+maxprofits;
     }
 };
-int main(){
-    int t;
-    cin>>t;
-    Solution solution;
-    int s;
-    int p;
-    int v;
-    int value;
-    pair<int,int> kind;
-    for(int it = 0; it<t; it ++){
-        for(int i = 0; i < KINDN; i ++){
-            cin>>kind.first>>kind.second;
-            solution.insert(i,kind);
-        }
+// int main(){
+//     int t;
+//     cin>>t;
+//     Solution solution;
+//     int s;
+//     int p;
+//     int v;
+//     int value;
+//     pair<int,int> kind;
+//     for(int it = 0; it<t; it ++){
+//         for(int i = 0; i < KINDN; i ++){
+//             cin>>kind.first>>kind.second;
+//             solution.insert(i,kind);
+//         }
 
-        cin>>v;
+//         cin>>v;
 
-        auto ret = solution.solve(v);
-        printf("Case %d: %lld\n",it+1,ret);
-    }
-    return 0;
-}
+//         auto ret = solution.solve(v);
+//         printf("Case %d: %lld\n",it+1,ret);
+//     }
+//     return 0;
+// }
