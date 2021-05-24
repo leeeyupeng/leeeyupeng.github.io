@@ -49,19 +49,19 @@ public:
         return ret;
     }
 };
-int main(){
-    int t;
-    cin>>t;
-    Solution solution;
-    string message;
-    pair<int,int> kind;
-    getline(cin,message);
-    for(int it = 0; it<t; it ++){
-        getline(cin,message);
+// int main(){
+//     int t;
+//     cin>>t;
+//     Solution solution;
+//     string message;
+//     pair<int,int> kind;
+//     getline(cin,message);
+//     for(int it = 0; it<t; it ++){
+//         getline(cin,message);
 
-        auto ret = solution.solve(message);
-        printf("Case %d: ",it+1);
-        cout<<ret<<endl;
-    }
-    return 0;
-}
+//         auto ret = solution.solve(message);
+//         printf("Case %d: ",it+1);
+//         cout<<ret<<endl;
+//     }
+//     return 0;
+// }
