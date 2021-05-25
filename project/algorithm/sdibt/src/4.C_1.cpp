@@ -51,16 +51,16 @@ public:
     }
 };
 
-int main(){
-    int t;
-    cin>>t;
-    Solution solution;
-    int n, A, K, a, b, m, P;
-    for(int it = 0; it<t; it ++){
-        cin>>n>>A>>K>>a>>b>>m>>P;
+// int main(){
+//     int t;
+//     cin>>t;
+//     Solution solution;
+//     int n, A, K, a, b, m, P;
+//     for(int it = 0; it<t; it ++){
+//         cin>>n>>A>>K>>a>>b>>m>>P;
 
-        auto ret = solution.solve(n, A, K, a, b, m, P);
-        printf("Case #%d: %d\n",it+1,ret);
-    }
-    return 0;
-}
+//         auto ret = solution.solve(n, A, K, a, b, m, P);
+//         printf("Case #%d: %d\n",it+1,ret);
+//     }
+//     return 0;
+// }
