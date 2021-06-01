@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://leeeyupeng.github.io/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Shading/Shading%20Frequencies.html</loc>
+    <lastmod>2021-05-31</lastmod>
+  </url>
+  <url>
+    <loc>https://leeeyupeng.github.io/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Shading/Blinn-Phong%20Reflectance%20Model.html</loc>
+    <lastmod>2021-05-31</lastmod>
+  </url>
+  <url>
     <loc>https://leeeyupeng.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/1787.%20%E4%BD%BF%E6%89%80%E6%9C%89%E5%8C%BA%E9%97%B4%E7%9A%84%E5%BC%82%E6%88%96%E7%BB%93%E6%9E%9C%E4%B8%BA%E9%9B%B6.html</loc>
     <lastmod>2021-05-26</lastmod>
   </url>
@@ -213,7 +221,7 @@
     <lastmod>2020-12-03</lastmod>
   </url>
   <url>
-    <loc>https://leeeyupeng.github.io/%E5%9B%BE%E5%BD%A2%E5%AD%A6/shadow/shadow%20mapping.html</loc>
+    <loc>https://leeeyupeng.github.io/%E5%AE%9E%E6%97%B6%E6%B8%B2%E6%9F%93/Shadow/shadow%20mapping.html</loc>
     <lastmod>2020-11-27</lastmod>
   </url>
   <url>
@@ -946,22 +954,6 @@
   </url>
   <url>
     <loc>https://leeeyupeng.github.io/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Rasterization/%E6%95%B0%E5%80%BC%E5%BE%AE%E5%88%86%E6%B3%95%E7%94%BB%E7%BA%BF.html</loc>
-    <lastmod>2020-07-20</lastmod>
-  </url>
-  <url>
-    <loc>https://leeeyupeng.github.io/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Shading/Blinn-Phong%20Reflectance%20Model.html</loc>
-    <lastmod>2020-07-20</lastmod>
-  </url>
-  <url>
-    <loc>https://leeeyupeng.github.io/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Shading/ambient.html</loc>
-    <lastmod>2020-07-20</lastmod>
-  </url>
-  <url>
-    <loc>https://leeeyupeng.github.io/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Shading/diffuse.html</loc>
-    <lastmod>2020-07-20</lastmod>
-  </url>
-  <url>
-    <loc>https://leeeyupeng.github.io/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Shading/specular.html</loc>
     <lastmod>2020-07-20</lastmod>
   </url>
   <url>
