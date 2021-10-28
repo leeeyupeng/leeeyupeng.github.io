@@ -32,7 +32,7 @@ class child:public parent,public virtual CFinalClassMixin<child>{
 //     }
 // };
 
-int main()
+int main_test()
 {
     parent p;
     child c;
