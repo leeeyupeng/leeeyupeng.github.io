@@ -153,7 +153,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Rasterization/%E5%A4%9A%E8%BE%B9%E5%BD%A2%E7%9A%84%E6%89%AB%E6%8F%8F%E8%BD%AC%E6%8D%A2%E4%B8%8E%E5%8C%BA%E5%9F%9F%E5%A1%AB%E5%85%85.html">
+    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6/pow%E5%87%BD%E6%95%B0.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/icon128.jpg">
@@ -167,7 +167,105 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Rasterization/%E5%A4%9A%E8%BE%B9%E5%BD%A2%E7%9A%84%E6%89%AB%E6%8F%8F%E8%BD%AC%E6%8D%A2%E4%B8%8E%E5%8C%BA%E5%9F%9F%E5%A1%AB%E5%85%85.html" class="post-title-link" itemprop="url">多边形的扫描转换与区域填充</a>
+            <a href="/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6/pow%E5%87%BD%E6%95%B0.html" class="post-title-link" itemprop="url">pow函数</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-15 12:38:54" itemprop="dateCreated datePublished" datetime="2020-07-15T12:38:54+08:00">2020-07-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">数学</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6/pow%E5%87%BD%E6%95%B0.html" class="post-meta-item leancloud_visitors" data-flag-title="pow函数" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6/pow%E5%87%BD%E6%95%B0.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6/pow%E5%87%BD%E6%95%B0.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="pow函数"><a href="#pow函数" class="headerlink" title="pow函数"></a>pow函数</h1><hr>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">myPow</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">double</span> ans= <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">double</span> xx = x;</span><br><span class="line">  <span class="keyword">long</span> <span class="keyword">long</span> nn = <span class="built_in">abs</span>(n);</span><br><span class="line">  <span class="keyword">while</span> (nn != <span class="number">0</span> &amp;&amp; xx!=<span class="number">1.0f</span>) &#123;</span><br><span class="line">    ans *= (nn &amp; <span class="number">0x1</span>) == <span class="number">0x1</span> ? xx : <span class="number">1</span>;</span><br><span class="line">    nn &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    xx *= xx;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> n&gt;=<span class="number">0</span>?ans:<span class="number">1</span>/ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6/pow%E5%87%BD%E6%95%B0.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Rasterization/%E4%B8%AD%E7%82%B9%E7%94%BB%E5%9C%86%E6%B3%95.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/icon128.jpg">
+      <meta itemprop="name" content="leeyupeng">
+      <meta itemprop="description" content="leeyupeng@126.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="leeyupeng">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Rasterization/%E4%B8%AD%E7%82%B9%E7%94%BB%E5%9C%86%E6%B3%95.html" class="post-title-link" itemprop="url">中点画圆法</a>
         </h2>
 
         <div class="post-meta">
@@ -201,7 +299,7 @@
             </span>
 
           
-            <span id="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Rasterization/%E5%A4%9A%E8%BE%B9%E5%BD%A2%E7%9A%84%E6%89%AB%E6%8F%8F%E8%BD%AC%E6%8D%A2%E4%B8%8E%E5%8C%BA%E5%9F%9F%E5%A1%AB%E5%85%85.html" class="post-meta-item leancloud_visitors" data-flag-title="多边形的扫描转换与区域填充" title="阅读次数">
+            <span id="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Rasterization/%E4%B8%AD%E7%82%B9%E7%94%BB%E5%9C%86%E6%B3%95.html" class="post-meta-item leancloud_visitors" data-flag-title="中点画圆法" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -216,8 +314,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Rasterization/%E5%A4%9A%E8%BE%B9%E5%BD%A2%E7%9A%84%E6%89%AB%E6%8F%8F%E8%BD%AC%E6%8D%A2%E4%B8%8E%E5%8C%BA%E5%9F%9F%E5%A1%AB%E5%85%85.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Rasterization/%E5%A4%9A%E8%BE%B9%E5%BD%A2%E7%9A%84%E6%89%AB%E6%8F%8F%E8%BD%AC%E6%8D%A2%E4%B8%8E%E5%8C%BA%E5%9F%9F%E5%A1%AB%E5%85%85.html" itemprop="commentCount"></span>
+    <a title="valine" href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Rasterization/%E4%B8%AD%E7%82%B9%E7%94%BB%E5%9C%86%E6%B3%95.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Rasterization/%E4%B8%AD%E7%82%B9%E7%94%BB%E5%9C%86%E6%B3%95.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -232,114 +330,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="多边形的扫描转换与区域填充"><a href="#多边形的扫描转换与区域填充" class="headerlink" title="多边形的扫描转换与区域填充"></a>多边形的扫描转换与区域填充</h1><h2 id="多边形的扫描转换"><a href="#多边形的扫描转换" class="headerlink" title="多边形的扫描转换"></a>多边形的扫描转换</h2><h3 id="扫描线算法"><a href="#扫描线算法" class="headerlink" title="扫描线算法"></a>扫描线算法</h3><p>  <a href="/project/cg/projects/graphic/include/polygonfill_scanning.hpp">polygonfill_scanning.hpp</a><br>  <a href="/project/cg/projects/graphic/src/polygonfill_scanning.cpp">polygonfill_scanning.cpp</a></p>
-<h3 id="边界标志算法"><a href="#边界标志算法" class="headerlink" title="边界标志算法"></a>边界标志算法</h3><p>  <a href="/project/cg/projects/graphic/include/polygonfill_edgemark.hpp">polygonfill_edgemark.hpp</a><br>  <a href="/project/cg/projects/graphic/src/polygonfill_edgemark.cpp">polygonfill_edgemark.cpp</a><br>  <a href="/project/cg/projects/graphic/include/polygonfill_edgemark2.hpp">polygonfill_edgemark2.hpp</a><br>  <a href="/project/cg/projects/graphic/src/polygonfill_edgemark2.cpp">polygonfill_edgemark2.cpp</a></p>
-<h2 id="区域填充"><a href="#区域填充" class="headerlink" title="区域填充"></a>区域填充</h2>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Rasterization/%E5%A4%9A%E8%BE%B9%E5%BD%A2%E7%9A%84%E6%89%AB%E6%8F%8F%E8%BD%AC%E6%8D%A2%E4%B8%8E%E5%8C%BA%E5%9F%9F%E5%A1%AB%E5%85%85.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/assembly.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/icon128.jpg">
-      <meta itemprop="name" content="leeyupeng">
-      <meta itemprop="description" content="leeyupeng@126.com">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="leeyupeng">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/assembly.html" class="post-title-link" itemprop="url">OPENGL assembly</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-15 12:31:14" itemprop="dateCreated datePublished" datetime="2020-07-15T12:31:14+08:00">2020-07-15</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OpenGL/" itemprop="url" rel="index"><span itemprop="name">OpenGL</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/assembly.html" class="post-meta-item leancloud_visitors" data-flag-title="OPENGL assembly" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/assembly.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/assembly.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="OPENGL-assembly"><a href="#OPENGL-assembly" class="headerlink" title="OPENGL assembly"></a>OPENGL assembly</h1><h2 id="NVEmulate"><a href="#NVEmulate" class="headerlink" title="NVEmulate"></a>NVEmulate</h2><hr>
-<hr>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
-<li><a href="https://developer.nvidia.com/nvemulate" target="_blank" rel="noopener">NVEmulate</a></li>
-<li><a href="https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_get_program_binary.txt" target="_blank" rel="noopener">ARB_get_program_binary</a></li>
-<li><a href="https://computergraphics.stackexchange.com/questions/7594/how-to-get-assembly-code-from-glsl-shader" target="_blank" rel="noopener">how-to-get-assembly-code-from-glsl-shader</a></li>
-</ul>
+          <h1 id="中点画圆法"><a href="#中点画圆法" class="headerlink" title="中点画圆法"></a>中点画圆法</h1><p><a href="/project/cg/projects/graphic/include/midpointcircle.hpp">midpointcircle.hpp</a><br><a href="/project/cg/projects/graphic/src/midpointcircle.cpp">midpointcircle.cpp</a></p>
 
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/assembly.html#more" rel="contents">
+              <a class="btn" href="/%E5%9B%BE%E5%BD%A2%E5%AD%A6/Rasterization/%E4%B8%AD%E7%82%B9%E7%94%BB%E5%9C%86%E6%B3%95.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -664,7 +659,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/Base/%E7%BB%98%E5%88%B6%E6%96%B9%E5%BC%8F.html">
+    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/opengl%20api.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/icon128.jpg">
@@ -678,7 +673,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/Base/%E7%BB%98%E5%88%B6%E6%96%B9%E5%BC%8F.html" class="post-title-link" itemprop="url">绘制方式</a>
+            <a href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/opengl%20api.html" class="post-title-link" itemprop="url">OPENGL API</a>
         </h2>
 
         <div class="post-meta">
@@ -701,7 +696,7 @@
             </span>
 
           
-            <span id="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/Base/%E7%BB%98%E5%88%B6%E6%96%B9%E5%BC%8F.html" class="post-meta-item leancloud_visitors" data-flag-title="绘制方式" title="阅读次数">
+            <span id="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/opengl%20api.html" class="post-meta-item leancloud_visitors" data-flag-title="OPENGL API" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -716,8 +711,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/Base/%E7%BB%98%E5%88%B6%E6%96%B9%E5%BC%8F.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/Base/%E7%BB%98%E5%88%B6%E6%96%B9%E5%BC%8F.html" itemprop="commentCount"></span>
+    <a title="valine" href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/opengl%20api.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/opengl%20api.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -733,14 +728,20 @@
 
       
           <p><img src="/images/opengl/opengl.jpg" alt>  </p>
-<h1 id="立即模式-Immediate-Mode"><a href="#立即模式-Immediate-Mode" class="headerlink" title="立即模式(Immediate Mode)"></a>立即模式(Immediate Mode)</h1><hr>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">glBegin(GL_QUADS);</span><br><span class="line">&#123;</span><br><span class="line">  glColor4f(<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);</span><br><span class="line">  glVertex3f(<span class="number">-5</span>, <span class="number">-5</span>, <span class="number">0.0</span>);</span><br><span class="line">  glVertex3f(<span class="number">-5</span>, <span class="number">0</span>, <span class="number">0.0</span>);</span><br><span class="line">  glVertex3f(<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>);</span><br><span class="line">  glVertex3f(<span class="number">0.0</span>, <span class="number">-5</span>, <span class="number">0.0</span>);</span><br><span class="line">  glColor4f(<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>);</span><br><span class="line">  glVertex3f(<span class="number">5</span>, <span class="number">5</span>, <span class="number">0.0</span>);</span><br><span class="line">  glVertex3f(<span class="number">5</span>, <span class="number">0.0</span>, <span class="number">0.0</span>);</span><br><span class="line">  glVertex3f(<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>);</span><br><span class="line">  glVertex3f(<span class="number">0.0</span>, <span class="number">5</span>, <span class="number">0.0</span>);</span><br><span class="line">&#125;</span><br><span class="line">glEnd();</span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="显示列表-DisplayList"><a href="#显示列表-DisplayList" class="headerlink" title="显示列表(DisplayList)"></a>显示列表(DisplayList)</h1><hr>
-<p>初始化<br></p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">GLuint displayListId;</span><br><span class="line">displayListId = glGenLists(<span class="number">1</span>);</span><br><span class="line">glNewList(displayListId, GL_COMPILE);</span><br><span class="line">&#123;</span><br><span class="line">  glBegin(GL_QUADS);</span><br><span class="line">  &#123;</span><br><span class="line">    glColor4f(<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);</span><br><span class="line">    glVertex3f(<span class="number">-5</span>, <span class="number">-5</span>, <span class="number">0.0</span>);</span><br><span class="line">    glVertex3f(<span class="number">-5</span>, <span class="number">0</span>, <span class="number">0.0</span>);</span><br><span class="line">    glVertex3f(<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>);</span><br><span class="line">    glVertex3f(<span class="number">0.0</span>, <span class="number">-5</span>, <span class="number">0.0</span>);</span><br><span class="line">    glColor4f(<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>);</span><br><span class="line">    glVertex3f(<span class="number">5</span>, <span class="number">5</span>, <span class="number">0.0</span>);</span><br><span class="line">    glVertex3f(<span class="number">5</span>, <span class="number">0.0</span>, <span class="number">0.0</span>);</span><br><span class="line">    glVertex3f(<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>);</span><br><span class="line">    glVertex3f(<span class="number">0.0</span>, <span class="number">5</span>, <span class="number">0.0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  glEnd();</span><br><span class="line">&#125;</span><br><span class="line">glEndList();</span><br></pre></td></tr></table></figure><p></p>
+<h1 id="A"><a href="#A" class="headerlink" title="A"></a>A</h1><h1 id="B"><a href="#B" class="headerlink" title="B"></a>B</h1><h1 id="C"><a href="#C" class="headerlink" title="C"></a>C</h1><h1 id="D"><a href="#D" class="headerlink" title="D"></a>D</h1><h2 id="glDrawElements"><a href="#glDrawElements" class="headerlink" title="glDrawElements"></a>glDrawElements</h2><hr>
+<p>函数原型为:void glDrawElements(GLenum mode, GLsizei count,GLenum type, const GLvoid * indices);   </p>
+<p>Specifies what kind of primitives to render. Symbolic constants GL_POINTS, GL_LINE_STRIP, GL_LINE_LOOP, GL_LINES, GL_TRIANGLE_STRIP, GL_TRIANGLE_FAN and GL_TRIANGLES are accepted.</p>
+<pre><code>GL_POINTS：点
+GL_LINES：线段，二个点确定线段
+GL_LINE_STRIP：第一个点依次连接的线段
+GL_LINE_LOOP：和GL_LINE_STRIP相同，但首尾连接，形成环状
+GL_TRIANGLES：三角形，三个点确定
+GL_TRIANGLE_STRIP：共用一个条带上的顶点的一组三角形
+GL_TRIANGLE_FAN：以一个原点为中心呈扇形排列，公共相邻顶点的一组三角形  
+</code></pre>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/Base/%E7%BB%98%E5%88%B6%E6%96%B9%E5%BC%8F.html#more" rel="contents">
+              <a class="btn" href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/opengl%20api.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1080,7 +1081,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/buffer%20object/ssbo.html">
+    <link itemprop="mainEntityOfPage" href="https://leeeyupeng.github.io/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/Text%20Rendering/freetype.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/icon128.jpg">
@@ -1094,7 +1095,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/buffer%20object/ssbo.html" class="post-title-link" itemprop="url">ssbo</a>
+            <a href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/Text%20Rendering/freetype.html" class="post-title-link" itemprop="url">freetype</a>
         </h2>
 
         <div class="post-meta">
@@ -1106,9 +1107,29 @@
 
               <time title="创建时间：2020-07-15 12:31:14" itemprop="dateCreated datePublished" datetime="2020-07-15T12:31:14+08:00">2020-07-15</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-15 12:38:54" itemprop="dateModified" datetime="2020-07-15T12:38:54+08:00">2020-07-15</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenGL/" itemprop="url" rel="index"><span itemprop="name">OpenGL</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenGL/Text-Rendering/" itemprop="url" rel="index"><span itemprop="name">Text Rendering</span></a>
+                </span>
+            </span>
 
           
-            <span id="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/buffer%20object/ssbo.html" class="post-meta-item leancloud_visitors" data-flag-title="ssbo" title="阅读次数">
+            <span id="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/Text%20Rendering/freetype.html" class="post-meta-item leancloud_visitors" data-flag-title="freetype" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -1123,8 +1144,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/buffer%20object/ssbo.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/buffer%20object/ssbo.html" itemprop="commentCount"></span>
+    <a title="valine" href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/Text%20Rendering/freetype.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/Text%20Rendering/freetype.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1139,15 +1160,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Shader-Storage-Buffer-Object"><a href="#Shader-Storage-Buffer-Object" class="headerlink" title="Shader Storage Buffer Object"></a>Shader Storage Buffer Object</h1><hr>
+          <h1 id="freetype"><a href="#freetype" class="headerlink" title="freetype"></a>freetype</h1><hr>
+<p>FreeType是一个能够用于加载字体并将他们渲染到位图以及提供多种字体相关的操作的软件开发库。它是一个非常受欢迎的跨平台字体库，它被用于Mac OS X、Java、PlayStation主机、Linux、Android等平台。FreeType的真正吸引力在于它能够加载TrueType字体。  </p>
+<p>TrueType字体不是用像素或其他不可缩放的方式来定义的，它是通过数学公式（曲线的组合）来定义的。类似于矢量图像，这些Rasterization后的字体图像可以根据需要的字体高度来生成。通过使用TrueType字体，你可以轻易渲染不同大小的字形而不造成任何质量损失。  </p>
 <hr>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
-<li><a href="https://www.khronos.org/opengl/wiki/Shader_Storage_Buffer_Object" target="_blank" rel="noopener">Shader Storage Buffer Object</a></li>
-</ul>
 
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/buffer%20object/ssbo.html#more" rel="contents">
+              <a class="btn" href="/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/OpenGL/Text%20Rendering/freetype.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1237,7 +1257,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">433</span>
+          <span class="site-state-item-count">434</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
